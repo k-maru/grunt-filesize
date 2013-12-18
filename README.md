@@ -1,7 +1,6 @@
-grunt-filesize
-==============
+# grunt-filesize
 
-log file size
+> A Grunt plugin for logging filesize.
 
 ## Documentation
 modify your `grunt.js` file by adding the following line:
@@ -14,7 +13,9 @@ Then add some configuration for the plugin like so:
         ...
         filesize: {
           base: {
-            files: ['build/*.js']
+            files: [
+                {expand: true, cwd: 'build', src: ['*.css', '*.js']}
+            ]
           }
         },
         ...
