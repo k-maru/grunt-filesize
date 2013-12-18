@@ -13,7 +13,9 @@ Then add some configuration for the plugin like so:
         ...
         filesize: {
           base: {
-            files: ['build/*.js']
+            files: [
+                {expand: true, cwd: 'build', src: ['*.css', '*.js']}
+            ]
           }
         },
         ...
