@@ -14,8 +14,7 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('filesize', 'A Grunt plugin for logging filesize.', function() {
     var options = this.options({
-      }),
-      reportOutput = [];
+    });
 
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
@@ -28,15 +27,12 @@ module.exports = function(grunt) {
           size = (stat.size / 1024).toFixed(2);
 
         grunt.log.writeln(path + ": " + String(size).green + " KiB (" + String(stat.size).green + " bytes)");
-        reportOutput.push(f.dest + '=' + size + '\n');
+        if (options.reporting) {
+          grunt.file.write(options.reporting(f.dest), 'YVALUE=' + size + '\n');
+        }
       }
 
     });
-
-    if (options.reporting) {
-      grunt.file.write(options.reporting, reportOutput.join(''));
-      grunt.log.writeln('Report written in: ' + options.reporting);
-    }
   });
 
 };

@@ -13,7 +13,9 @@ Then add some configuration for the plugin like so:
         ...
         filesize: {
           options: {
-            reporting: 'target/grunt/filesize.txt'
+            reporting: function (filePath) {
+              return 'target/grunt/filesize/' + filePath + '.txt';
+            }
           },
           base: {
             files: [
@@ -24,4 +26,4 @@ Then add some configuration for the plugin like so:
         ...
     });
 
-Setting the 'reporting' option will generate a properties file on the given path you can use in the Jenkins Plot plugin or other ways.
+Setting the 'reporting' option will generate a properties file on the given path for each file measured, you can use those in the Jenkins Plot plugin or other ways.
