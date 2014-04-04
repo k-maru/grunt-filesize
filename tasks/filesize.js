@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         var stat = fs.statSync(path),
           size = (stat.size / 1024).toFixed(2);
 
-        grunt.log.writeln(path + ": " + String(size).green + " KiB (" + String(stat.size).green + " bytes)");
+        grunt.log.writeln(path + ": " + String(size).green + " kb (" + String(stat.size).green + " bytes)");
         if (options.reporting) {
           grunt.file.write(options.reporting(f.dest), 'YVALUE=' + size + '\n');
         }
