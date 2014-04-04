@@ -23,8 +23,13 @@ module.exports = function(grunt) {
       if (!fs.existsSync(path)){
         grunt.log.writeln(path + ": not found.");
       } else {
-        var stat = fs.statSync(path);
-        grunt.log.writeln(path + ": " + String((stat.size / 1024).toFixed(2)).green + " kb (" + String(stat.size).green + " bytes)");
+        var stat = fs.statSync(path),
+          size = (stat.size / 1024).toFixed(2);
+
+        grunt.log.writeln(path + ": " + String(size).green + " KiB (" + String(stat.size).green + " bytes)");
+        if (options.reporting) {
+          grunt.file.write(options.reporting(f.dest), 'YVALUE=' + size + '\n');
+        }
       }
 
     });
