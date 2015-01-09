@@ -47,7 +47,7 @@ module.exports = function(grunt) {
     	var month = months[d.getMonth()];
     	var day = d.getDate();
     	if (day < 10) {day = '0' + day;}
-    	grunt.file.write(options.gangResults + day + month + d.getFullYear() + '.csv', results);
+    	grunt.file.write(options.trackResults + day + month + d.getFullYear() + '.csv', results);
     }
   });
 
