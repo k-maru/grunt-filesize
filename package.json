@@ -1,7 +1,7 @@
 {
   "name": "grunt-filesize",
   "description": "A Grunt plugin for logging filesize.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "homepage": "https://github.com/k-maru/grunt-filesize",
   "author": {
     "name": "kazuhide maruyama"
@@ -35,7 +35,9 @@
     "moment": "~2.9.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "~0.4.2"
+  },
+  "dependencies": {
     "numeral": "~1.5.3",
     "moment": "~2.9.0"
   },
