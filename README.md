@@ -48,11 +48,11 @@ grunt.initConfig({
 
 ## Options
 
-### format(string | function)
+### format(string | function) not required.
 
 Specify the format of the file to be output.
 
-specify the format in the placeholder if you have set in the String. Possible placeholder is as follows.
+Specify the format in the placeholder if you have set in the String. Possible placeholder is as follows.
 
 |placeholder |type   |description             |
 |------------|-------|------------------------|
@@ -76,7 +76,7 @@ Format specification can be specified only in the date type or numeric type.
 Date type format use the [moment](https://www.npmjs.com/package/moment).
 Number type format use the [numeral](https://www.npmjs.com/package/numeral).
 
-### output(array | string)
+### output(array | string) not required.
 
 Output options is specify the output destination and format.
 
@@ -87,9 +87,9 @@ Possible property is as follows.
 |stdout    |bool            |output to console. If true is specified, the path property is ignored. |
 |path      |string          |output file name. You can specify the place holder.                    |
 |append    |bool            |Append the results to output file.                                     |
-|format    |string|function |Same format option                                                     |
+|format    |string,function |Same format option                                                     |
 
-### reporting(function)
+### reporting(function) not required.
 
 Obsolete.
 
