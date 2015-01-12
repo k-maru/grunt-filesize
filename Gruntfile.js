@@ -23,7 +23,27 @@ module.exports = function(grunt) {
     },
     filesize: {
       test: {
-        src: "tasks/filesize.js"
+        src: ["test/files/**/*.*", "test/files2/**/*.*"],
+        options: {
+          output: [
+            {
+              stdout: true
+            },
+            {
+              path: "test/result/overwirte.txt",
+              format: "{fullpath} {filename} {basename} {now:YYYY/MM/DD HH:mm:ss} {size}"
+            },
+            {
+              path: "test/result/append.txt",
+              format: "{fullpath} {filename} {basename} {now:YYYY/MM/DD HH:mm:ss} {size}",
+              append: true
+            },
+            {
+              path: "test/result/{now:DDMMMYYYY}.csv",
+              format: "{filename},{size}"
+            }
+          ]
+        }
       }
     }
   });
