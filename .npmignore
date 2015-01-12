@@ -2,6 +2,7 @@ node_modules
 npm-debug.log
 /.idea
 src
+test
 /.gitignore
 Gruntfile.js
 .jshintrc

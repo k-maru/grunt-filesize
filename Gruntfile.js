@@ -2,7 +2,7 @@
  * grunt-filesize
  * https://github.com/k-maru/grunt-filesize
  *
- * Copyright (c) 2013 kazuhide maruyama
+ * Copyright (c) 2015 kazuhide maruyama
  * Licensed under the MIT license.
  */
 
