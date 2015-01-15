@@ -201,8 +201,8 @@ module.exports = function(grunt) {
     var opts = this.options({});
     if(opts.reporting){
       grunt.log.writeln(">>".yello + " reporting options is now obsolete.");
-      this.files.forEach(function(file) {
-        grunt.file.write(opts.reporting(file.dest), 'YVALUE=' + size + '\n');
+      files.forEach(function(file) {
+        grunt.file.write(opts.reporting(file.dest), 'YVALUE=' + file.size + '\n');
       });
     }
 
