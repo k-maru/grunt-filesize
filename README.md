@@ -20,7 +20,7 @@ grunt.initConfig({
         {expand: true, cwd: 'build', src: ['*.css', '*.js']}
       ],
       options: {
-        ouput: [
+        output: [
           {
             stdout: true
           },
