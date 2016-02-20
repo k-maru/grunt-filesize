@@ -35,7 +35,7 @@
     "moment": "~2.9.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.2"
+    "grunt": ">=0.4.0"
   },
   "dependencies": {
     "numeral": "~1.5.3",
